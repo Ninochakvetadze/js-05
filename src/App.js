@@ -1,19 +1,21 @@
 import "./css/App.css";
-import { Header, Footer } from "./pages";
+import { routesMap, Header, Footer } from "./pages";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function ButtonComponent({ name }) {
-    return <button>{name}</button>;
-}
-
-function App() {
+export default function App() {
     return (
-        <>
+        <BrowserRouter>
             <Header />
-            <ButtonComponent name="John" />
-            <ButtonComponent name="Hiorgi" />
+            <Routes>
+                {routesMap.map((route, index) => (
+                    <Route
+                        key={`route-list-${index}`}
+                        path={route.path}
+                        element={route.element}
+                    />
+                ))}
+            </Routes>
             <Footer />
-        </>
+        </BrowserRouter>
     );
 }
-
-export default App;

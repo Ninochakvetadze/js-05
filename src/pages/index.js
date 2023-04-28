@@ -1,8 +1,8 @@
 import { Home } from "./home";
 import { About } from "./about";
 import { Contact } from "./contact";
-export { Header } from "./Header";
-export { Footer } from "./Footer";
+export { Header } from "./header";
+export { Footer } from "./footer";
 
 export const routesMap = [
     {
