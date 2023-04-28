@@ -6,6 +6,10 @@ export { Footer } from "./footer";
 
 export const routesMap = [
     {
+        path: "/",
+        element: <Home />,
+    },
+    {
         path: "home",
         element: <Home />,
     },

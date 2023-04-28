@@ -8,11 +8,11 @@ export function Nav() {
     return (
         <nav>
             <ul>
-                {links.map((link, index) => {
+                {links.map((link, index) => (
                     <li key={index}>
                         <PageLink to={link.to} name={link.name} />
-                    </li>;
-                })}
+                    </li>
+                ))}
             </ul>
         </nav>
     );
