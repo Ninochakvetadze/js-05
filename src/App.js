@@ -1,5 +1,6 @@
-import "./css/App.css";
-import { routesMap, Header, Footer } from "./pages";
+import "./css/App.scss";
+import { Header, Footer } from "./pages";
+import { routesMap } from "./pages/services/routes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
