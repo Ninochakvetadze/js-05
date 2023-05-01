@@ -1,7 +1,5 @@
 import { About, Contact, Home } from "../../pages";
-// import { Home } from "./home";
-// import { About } from "./about";
-// import { Contact } from "./contact";
+import { Products } from "../products";
 export const routesMap = [
     {
         path: "/",
@@ -18,5 +16,9 @@ export const routesMap = [
     {
         path: "contact",
         element: <Contact />,
+    },
+    {
+        path: "products",
+        element: <Products />,
     },
 ];

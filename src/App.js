@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 export default function App() {
     return (
         <BrowserRouter>
-            <Header />
+            {/* <Header /> */}
             <Routes>
                 {routesMap.map((route, index) => (
                     <Route
@@ -16,7 +16,7 @@ export default function App() {
                     />
                 ))}
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
         </BrowserRouter>
     );
 }
