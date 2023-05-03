@@ -4,6 +4,7 @@ export function Nav() {
         { to: "/", name: "Home" },
         { to: "/about", name: "About" },
         { to: "/contact", name: "Contact" },
+        { to: "/products", name: "Products" },
     ];
     return (
         <nav>
