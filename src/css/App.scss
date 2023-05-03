@@ -21,6 +21,28 @@
         border: 0;
     }
 }
+#header {
+    nav {
+        ul {
+            display: flex;
+            li {
+                margin: 0 10px 0 0;
+                list-style: none;
+                text-decoration: none;
+            }
+        }
+    }
+    .language {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin: 0 10px;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
 // .App {
 //   text-align: center;
 // }

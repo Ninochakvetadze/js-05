@@ -19,4 +19,29 @@
 }
 #loader img {
   border: 0;
+}
+
+#header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#header nav ul li {
+  margin: 0 10px 0 0;
+  list-style: none;
+  text-decoration: none;
+}
+#header .language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+#header .language button {
+  margin: 0 10px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */

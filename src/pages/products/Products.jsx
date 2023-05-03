@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 // import { _get } from "../services";
 import axios from "axios";
 import { Loader } from "../../globalComponents";
+import { LanguageContext } from "../services/contexts/LanguageContext";
 export function Products() {
+    const { language, setLanguage } = useContext(LanguageContext);
+    console.log(language);
     const [products, setProducts] = useState([]);
     useEffect(() => {
         async function fetchData() {
