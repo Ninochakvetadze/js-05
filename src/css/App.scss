@@ -22,14 +22,14 @@
     }
 }
 #header {
-    nav {
-        ul {
-            display: flex;
-            li {
-                margin: 0 10px 0 0;
-                list-style: none;
-                text-decoration: none;
-            }
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: aquamarine;
+        a {
+            color: black;
         }
     }
     .language {

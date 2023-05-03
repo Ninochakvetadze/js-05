@@ -4,16 +4,16 @@ import { Nav } from "./components";
 import Button from "@mui/material/Button";
 import { LanguageContext } from "../services/contexts/LanguageContext";
 export function Header() {
-    const { language, setLanguage } = useContext(LanguageContext);
+    const { langs, language, changeLanguage } = useContext(LanguageContext);
 
     return (
         <div id="header">
-            <Nav />
+            <Nav langs={langs} language={language} />
             <div className="language">
-                <Button onClick={() => setLanguage("en")} variant="outlined">
+                <Button onClick={() => changeLanguage("en")} variant="outlined">
                     EN
                 </Button>
-                <Button onClick={() => setLanguage("ka")} variant="outlined">
+                <Button onClick={() => changeLanguage("ka")} variant="outlined">
                     Ka
                 </Button>
             </div>

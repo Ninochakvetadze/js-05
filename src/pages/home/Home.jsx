@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { LanguageContext } from "../services/contexts/LanguageContext";
 export function Home() {
-    const { language, setLanguage } = useContext(LanguageContext);
-    console.log(language);
+    const { langs, language } = useContext(LanguageContext);
+
     return (
         <div>
-            <h1>Home</h1>
+            <h1>{langs[language].home.title}</h1>
         </div>
     );
 }
