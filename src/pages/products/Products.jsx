@@ -1,20 +1,32 @@
 import { useEffect, useState } from "react";
-
+// import { _get } from "../services";
+import axios from "axios";
 export function Products() {
-    const [cart, setCart] = useState(0);
-    const [fav, setFav] = useState(0);
+    const [products, setProducts] = useState([]);
     useEffect(() => {
-        console.log(cart, fav);
-    }, [cart, fav]);
+        async function fetchData() {
+            const apiData = await axios.get(
+                "https://fakestoreapi.com/products"
+            );
+            if (apiData.status === 200) {
+                setProducts(apiData.data);
+            }
+        }
+        fetchData();
+    }, []);
     return (
         <div>
             <h1>Products</h1>
-            <button tid={"${cart}"} onClick={() => setCart(cart + 1)}>
-                Click {cart}
-            </button>
-            <button tid={"${fav}"} onClick={() => setFav(fav + 1)}>
-                Click{fav}
-            </button>
+            <div id="products">
+                {products.map((product, index) => (
+                    <div key={index}>
+                        <img src={product.image} alt={product.title} />
+                        <h2>{product.title}</h2>
+                        <p>{product.description}</p>
+                        <p>{product.price}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
