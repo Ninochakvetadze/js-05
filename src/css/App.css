@@ -21,6 +21,40 @@
   border: 0;
 }
 
+#product img {
+  width: 200px;
+  height: 150px;
+}
+#product h2 {
+  text-align: center;
+  color: blueviolet;
+}
+#product p {
+  text-align: center;
+}
+
+#related-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+#related-products div {
+  border: 1px dashed black;
+  width: 150px;
+  height: 150px;
+}
+#related-products div img {
+  width: 90px;
+  height: 90px;
+}
+
 #header .navigation {
   display: -webkit-box;
   display: -ms-flexbox;

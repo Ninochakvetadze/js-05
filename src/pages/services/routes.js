@@ -1,5 +1,5 @@
-import { About, Contact, Home } from "../../pages";
-import { Products } from "../products";
+import { About, Contact, Home, Products, ProductDetails } from "../../pages";
+
 export const routesMap = [
     {
         path: "/",
@@ -20,5 +20,9 @@ export const routesMap = [
     {
         path: "products",
         element: <Products />,
+    },
+    {
+        path: "products/:prID",
+        element: <ProductDetails />,
     },
 ];
