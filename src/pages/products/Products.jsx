@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { Link } from "react-router-dom";
-import { Loader } from "../../globalComponents";
+import { Loader, Categories } from "../../globalComponents";
+import { Product, Filters } from "./components/Product";
 import { api } from "../services/api";
 export function Products() {
     const [products, setProducts] = useState([]);
@@ -20,15 +20,7 @@ export function Products() {
             <div id="product">
                 {products.length > 0 ? (
                     products.map((product, index) => (
-                        <div key={index}>
-                            <img src={product.image} alt={product.title} />
-                            <h2>{product.title}</h2>
-                            {/* <p>{product.description}</p> */}
-                            <p>{product.price}</p>
-                            <Link to={`/products/${product.id}`}>
-                                View Details
-                            </Link>
-                        </div>
+                        <Product key={index} Product={product} />
                     ))
                 ) : (
                     <Loader />
